@@ -14,7 +14,7 @@ master/HEAD
 - LI #7 Path::expand() doesn't correctly expand some paths
           (thanks to Laurence)
 - Corrected initialization order of struct flock for DARWIN. This may address
-  file locking prboelms on MacOS.
+  file locking problems on MacOS.
 - Libshared now supports datetime values up to year 9999.
 - Bump minimal required standard to C++17 and minimal cmake version to 3.1.
 - Started calling fsync/fdatasync on File::close for better durability.
