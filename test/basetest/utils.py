@@ -143,7 +143,7 @@ def _retrieve_output(thread, timeout, queue, thread_error):
         # data = (stdout, stderr, exitcode)
         data = queue.get(timeout=timeout)
     except Empty:
-        data = TimeoutWaitingFor("streams from program")
+        raise TimeoutWaitingFor("streams from program")
 
     return data
 
