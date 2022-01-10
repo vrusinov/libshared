@@ -7,3 +7,4 @@ libshared.a
 cmake.h
 lex
 patches
+.vscode
