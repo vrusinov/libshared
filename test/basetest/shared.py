@@ -40,18 +40,6 @@ class Shared(object):
 
         self.reset_env()
 
-    def add_default_extension(self, filename):
-        """Add default extension to current instance
-        """
-        if not os.path.isdir(self.extdir):
-            os.mkdir(self.extdir)
-
-        extfile = os.path.join(self.extdir, filename)
-        if os.path.isfile(extfile):
-            raise IOError("{} already exists".format(extfile))
-
-        shutil.copy(os.path.join(DEFAULT_EXTENSION_PATH, filename), extfile)
-
     def __repr__(self):
         txt = super(Shared, self).__repr__()
         return "{0} running from {1}>".format(txt[:-1], self.datadir)
